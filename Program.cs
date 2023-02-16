@@ -9,9 +9,17 @@ namespace Projet_Commercial
         {
 
 
+            Commercial commercial1 = new Commercial("NJO BOJONGO ", "Maxime", 2004);
+            Commercial commercial2 = new Commercial("GNAGNON ", "Joris", 1992); 
+            Commercial commercial3 = new Commercial("HALLYDAY ", "Johnny", 1702);
+   
+            Console.WriteLine("Information commerciale 1 : " + commercial1);
+            Console.WriteLine("Information commerciale 2 : " + commercial2);
+            Console.WriteLine("Information commerciale 3 : " + commercial3);
 
-            Commercial commerciaux = new Commercial("ROLLAND", "Stéphane", 1990);
-            Console.WriteLine(commerciaux);
+
+
+
 
 
 

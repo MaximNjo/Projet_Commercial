@@ -9,6 +9,7 @@ namespace Projet_Commercial
 
         private string codeCategorie;
         private string libCategorie;
+       
 
         public string CodeCategorie { get => codeCategorie; set => codeCategorie = value; }
         public string LibCategorie { get => libCategorie; set => libCategorie = value; }
