@@ -3,23 +3,26 @@
 using System;
 namespace Projet_Commercial
 {
-    public class Commercial
+    class Commercial
     {
         private string nom;
         private string prenom;
         private int anneeNaissance;
+        private Categorie nouveau;
 
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
         public int AnneeNaissance { get => anneeNaissance; set => anneeNaissance = value; }
+        public Categorie Nouveau { get => nouveau; set => nouveau = value; }
 
+        
 
-
-        public Commercial(string nom, string prenom, int anneeNaissance)
+        public Commercial(string nom, string prenom, int anneeNaissance, Categorie nouveau)
         {
             this.Nom = nom;
             this.Prenom = prenom;
             this.AnneeNaissance = anneeNaissance;
+            this.Nouveau = nouveau;
         }
 
 
@@ -35,7 +38,7 @@ namespace Projet_Commercial
         public override string ToString()
         {
 
-            return "Nom : " + this.nom + "Prenom : " + this.prenom + " Année de Naissance : " + this.anneeNaissance;
+            return "Nom : " + this.nom + "Prenom : " + this.prenom + " Année de Naissance : " + this.anneeNaissance + "Nouveau :  " + this.nouveau;
 
         }
 
