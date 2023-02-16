@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -6,6 +6,12 @@ namespace Projet_Commercial
 {
     class Program
     {
+
+        private Commercial[] commerciaux; // tableau de commerciaux
+        private int nbCommerciaux;
+
+
+
         static void Main(string[] args)
         {
             // Les 2 categories
@@ -19,6 +25,11 @@ namespace Projet_Commercial
             Commercial commercial2 = new Commercial("GNAGNON ", "Joris", 1992, new Categorie("A2", "indépendant")); 
             Commercial commercial3 = new Commercial("HALLYDAY ", "Johnny", 1702, new Categorie("A3", "indépendant"));
    
+            // 2 services 
+
+            Service national = new Service();
+            Service international = new Service();
+
       
             Console.WriteLine("Information commerciale 1 : " + commercial1);
             Console.WriteLine("Information commerciale 2 : " + commercial2);
@@ -46,8 +57,33 @@ namespace Projet_Commercial
             return c + c2;
 
 
-        } 
+        }
+        public string AjouterCommercial(Commercial commercial)
+        {
+            if (effectif < commerciaux.Length)
+            {
+                commerciaux[effectif] = commercial;
+                effectif++;
+
+            }
+        }
 
 
-    }
+        public void AfficherCommerciaux()
+            {
+                Console.WriteLine("Commerciaux du service :");
+                foreach (Commercial commercial in commerciaux)
+                {
+                    if (commercial != null)
+                    {
+                        Console.WriteLine({commercial.Nom};
+                    }
+                }
+            }
+
+
+        }
+
+
+    
 }
